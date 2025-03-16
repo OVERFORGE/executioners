@@ -32,14 +32,14 @@ const HeroSection = () => {
             </p>
           </div>
           <motion.button
-            className="lg:w-66 lg:h-[60px] bg-white mt-[42px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer"
+            className="w-50 h-[60px] p-2 lg:p-0 lg:w-66 lg:h-[60px] bg-white mt-[42px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer"
             animate={{ opacity: onCTA ? 0 : 1 }}
             transition={{ duration: 0.1 }}
           >
-            <p className="text-black font-extrabold text-[20px]">
+            <p className="text-[14px] text-black font-extrabold lg:text-[20px]">
               Start Growing Now
             </p>
-            <div className="bg-red-500 w-[48px] h-[48px] rounded-4xl flex justify-center items-center ">
+            <div className="bg-red-500 w-[36px] h-[36px]  lg:w-[48px] lg:h-[48px] rounded-4xl flex justify-center items-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -56,11 +56,11 @@ const HeroSection = () => {
               </svg>
             </div>
           </motion.button>
-          <motion.button className="lg:w-66 lg:h-[60px] bg-white -mt-[60px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer">
+          <motion.button className="w-50 h-[60px] p-4 lg:p-0 lg:w-66 lg:h-[60px] bg-white -mt-[60px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer">
             <motion.p
               animate={{ opacity: onCTA ? 1 : 0 }}
               transition={{ duration: 1 }}
-              className="text-black font-extrabold text-[20px]"
+              className="text-black font-extrabold lg:text-[20px]"
             >
               Start Growing Now
             </motion.p>
@@ -88,7 +88,7 @@ const HeroSection = () => {
               </motion.svg>
             </motion.div>
           </motion.button>
-          <div className="flex justify-center flex-col items-center mt:8 md:mt-13 gap-4">
+          <div className="flex justify-center flex-col items-center mt-13 gap-4">
             <div className="h-10 w-5 outline outline-[6px] outline-exered/10 inline-flex rounded-full justify-center pt-2">
               <div className="h-3 w-1 bg-exered rounded-full"></div>
             </div>

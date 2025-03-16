@@ -8,15 +8,15 @@ import communityIcon from "../assets/community_icon.png";
 import eventIcon from "../assets/event_icon.png";
 const GrowthUnleashed = () => {
   return (
-    <div className="container px-25 relative font-primary ">
-      <h1 className="text-6xl font-extrabold text-exebeige ">
+    <div className="container px-4 lg:px-25 relative font-primary ">
+      <h1 className=" text-4xl lg:text-6xl font-extrabold text-exebeige ">
         Web3 Growth <span className="text-exered">Unleashed</span>
       </h1>
-      <p className="text-[22px] text-exebeige/80 mt-5">
+      <p className="text-[16px] lg:text-[22px] text-exebeige/80 mt-5">
         Helping Web3 brands grow with tailored content, strategic events, and
         expert community <br /> engagement for long-term success.
       </p>
-      <div className="flex gap-x-[19px] lg:w-full justify-between mt-0 mb-0 z-1">
+      <div className="flex flex-col md:flex-row sm:gap-x-[19px] lg:w-full justify-between mt-0 mb-0 z-1">
         <Magnetic>
           <GrowthCard
             icon={contentIcon}

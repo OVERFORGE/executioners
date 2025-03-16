@@ -26,7 +26,7 @@ const StickyCursor = () => {
   }, []);
 
   return (
-    <div className="overflow-x-clip">
+    <div className="hidden sm:block overflow-x-clip ">
       <motion.div
         style={{
           left: smoothMouse.x,

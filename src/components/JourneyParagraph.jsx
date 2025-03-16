@@ -15,8 +15,10 @@ const JourneyParagraph = ({ heading, paragraph }) => {
       ref={ref}
       transition={{ duration: 0.5, ease: easeIn }}
     >
-      <h1 className="text-3xl font-extrabold text-exebeige mb-5">{heading}</h1>
-      <p className="text-lg text-gray-600">{paragraph}</p>
+      <h1 className="text-xl lg:text-3xl font-extrabold text-exebeige mb-2 lg:mb-5">
+        {heading}
+      </h1>
+      <p className="text-sm lg:text-lg text-gray-600">{paragraph}</p>
     </motion.div>
   );
 };

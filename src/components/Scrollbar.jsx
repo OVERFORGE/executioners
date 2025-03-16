@@ -7,7 +7,7 @@ const Scrollbar = ({ sections }) => {
 
   const { activeSection, activeSectionProgress } = sectionContext;
   return (
-    <motion.div className="fixed right-10 h-screen flex flex-col gap-2 justify-center  z-10 -mt-[15%]">
+    <motion.div className="hidden   fixed right-10 h-screen md:flex flex-col gap-2 justify-center  z-10 -mt-[15%]">
       {sections.map(({ positionId }) => (
         <motion.div
           layout

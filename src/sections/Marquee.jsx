@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Marquee = () => {
   return (
-    <div className="w-full m-auto h-70    ">
+    <div className="w-full m-auto lg:h-70  h-40  ">
       {/* <div className="gradient-merge"></div> */}
 
       <div className="w-full h-1 bg-exered"></div>
@@ -15,7 +15,7 @@ const Marquee = () => {
           repeatType: "loop",
           ease: "linear",
         }}
-        className="flex lg:font-exemarquee font-black text-9xl text-exered gap-30 cursor-default pt-5 -tracking-normal font-bold italic "
+        className="flex font-exemarquee font-black text-4xl lg:text-9xl text-exered gap-30 cursor-default pt-1 lg:pt-5 -tracking-normal font-bold italic "
       >
         <p>#BEATTHEGOD</p>
         <p>#EVOLUTIONHASBEGUN</p>

@@ -359,3 +359,32 @@ body {
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .paragraph {
+    display: flex;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+    height: 100%;
+    color: #e5ded4;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width: calc(10 / 12 * 100%);
+
+    .word {
+      position: relative;
+
+      margin-right: 6px;
+
+      margin-top: 10px;
+
+      .shadow {
+        position: absolute;
+
+        opacity: 20%;
+      }
+    }
+  }
+}

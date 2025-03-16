@@ -112,7 +112,7 @@ const IndexPage = () => {
             <Journey />
           </Section>
 
-          <div className="h-[150vh]"></div>
+          <div className="h-[30vh]"></div>
         </div>
       </SectionContext.Provider>
     </div>
