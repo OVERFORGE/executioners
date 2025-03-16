@@ -2,19 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 const links = [
   {
-    title: "Projects",
+    title: "Home",
+
+    href: "/",
+  },
+  {
+    title: "Esports",
 
     href: "/",
   },
 
   {
-    title: "Agency",
+    title: "Merchandise",
 
     href: "/",
   },
 
   {
-    title: "Expertise",
+    title: "Events",
+
+    href: "/",
+  },
+  {
+    title: "Contact Us",
 
     href: "/",
   },

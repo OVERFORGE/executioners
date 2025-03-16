@@ -19,7 +19,7 @@ const WholeJourney = () => {
         <div>
           <div className="flex w-10/12  m-auto mt-10 gap-6 text-lg font-primary items-center text-exebeige ">
             <div className="flex-6/12">
-              <img src={consoleImg} alt="" />
+              {/* <img src={consoleImg} alt="" /> */}
             </div>
             <JourneyRedDot />
             <div className="flex-6/12">
