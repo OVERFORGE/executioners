@@ -20,7 +20,12 @@ const FooterContent = () => {
           </div>
           <div className="w-full m-auto lg:px-25 flex gap-2 justify-center">
             <Magnetic>
-              <div className="h-[50px] w-[50px] lg:h-[78px] lg:w-[78px] rounded-xl items-center flex justify-center -mt-1.5">
+              <div
+                className="h-[50px] w-[50px] lg:h-[78px] lg:w-[78px] rounded-xl items-center flex justify-center -mt-1.5"
+                onClick={() =>
+                  window.open("https://x.com/ExecutionersES", "_blank")
+                }
+              >
                 <img
                   src={Twitter}
                   className="h-[47px] lg:h-[78px] w-[47px] lg:w-[78px]"
@@ -28,7 +33,15 @@ const FooterContent = () => {
               </div>
             </Magnetic>
             <Magnetic>
-              <div className="bg-black h-[40px] w-[40px] lg:h-[66px] lg:w-[66px] rounded-md lg:rounded-xl items-center flex justify-center">
+              <div
+                className="bg-black h-[40px] w-[40px] lg:h-[66px] lg:w-[66px] rounded-md lg:rounded-xl items-center flex justify-center"
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/_the_executioners/",
+                    "_blank"
+                  )
+                }
+              >
                 <img
                   src={Instagram}
                   className="h-[25px] lg:h-[40px] lg:w-[40px]"
@@ -36,7 +49,15 @@ const FooterContent = () => {
               </div>
             </Magnetic>
             <Magnetic>
-              <div className="bg-black h-[40px] w-[40px] lg:h-[66px] lg:w-[66px] rounded-md lg:rounded-xl items-center flex justify-center">
+              <div
+                className="bg-black h-[40px] w-[40px] lg:h-[66px] lg:w-[66px] rounded-md lg:rounded-xl items-center flex justify-center"
+                onClick={() =>
+                  window.open(
+                    "https://medium.com/@esportsexecutioners",
+                    "_blank"
+                  )
+                }
+              >
                 <img
                   src={Medium}
                   className="h-[25px] lg:h-[40px] lg:w-[40px]"
@@ -44,7 +65,12 @@ const FooterContent = () => {
               </div>
             </Magnetic>
             <Magnetic>
-              <div className="bg-black h-[40px] w-[40px] lg:h-[66px] lg:w-[66px] rounded-md lg:rounded-xl items-center flex justify-center">
+              <div
+                className="bg-black h-[40px] w-[40px] lg:h-[66px] lg:w-[66px] rounded-md lg:rounded-xl items-center flex justify-center"
+                onClick={() =>
+                  window.open("https://discord.gg/rjBgaGjpCN", "_blank")
+                }
+              >
                 <img
                   src={Discord}
                   className="h-[25px] lg:h-[40px] lg:w-[40px]"
