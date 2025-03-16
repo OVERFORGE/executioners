@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-exemarquee: "exemarquee", normal;
+  --font-exe: "Montserrat", sans-serif;
+  --font-primary: "Manrope", sans-serif;
+  --font-secondary: "Architects Daughter", cursive;
+  --color-exered: #ff000d;
+  --color-exebeige: #e5ded4;
+  --shadow-exe: (
+    2px 2px 141px -16px rgba(255, 255, 255, 1) ; -moz-box-shadow: 2px 2px 141px -16px
+      rgba(255, 255, 255, 1) ; box-shadow: 2px 2px 141px -16px
+      rgba(255, 255, 255, 1) ;
+  );
+}
