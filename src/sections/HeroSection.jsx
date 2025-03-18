@@ -3,6 +3,7 @@ import useMousePosition from "../utils/useMousePosition";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import CTAButton from "../components/CTAButton";
+import { NavLink } from "react-router-dom";
 const HeroSection = () => {
   const { x, y } = useMousePosition();
   const [isHovered, setIsHovered] = useState(false);
@@ -12,7 +13,7 @@ const HeroSection = () => {
   return (
     <div className="pb-7">
       <div className="mask-container">
-        <div className="container text-exebeige text-center mt-[54px] lg:mt-16  font-primary ">
+        <div className=" text-exebeige text-center mt-[54px] lg:mt-16  font-primary ">
           <div className="flex justify-center items-center gap-[3px] ml-[-6px]">
             <div className="bg-exebeige w-[7px] h-[7px] rounded-4xl"></div>
             <p className="text-[12px] lg:text-base">Executioners Brings You</p>
@@ -31,63 +32,68 @@ const HeroSection = () => {
               <br /> communities, and impactful events for lasting growth.
             </p>
           </div>
-          <motion.button
-            className="w-50 h-[60px] p-2 lg:p-0 lg:w-66 lg:h-[60px] bg-white mt-[42px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer"
-            animate={{ opacity: onCTA ? 0 : 1 }}
-            transition={{ duration: 0.1 }}
-          >
-            <p className="text-[14px] text-black font-extrabold lg:text-[20px]">
-              Start Growing Now
-            </p>
-            <div className="bg-red-500 w-[36px] h-[36px]  lg:w-[48px] lg:h-[48px] rounded-4xl flex justify-center items-center ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="white"
-                class="size-6"
+          <NavLink to={"/grow-with-us"}>
+            <motion.button
+              className="w-50 h-[60px] p-2 lg:p-0 lg:w-66 lg:h-[60px] bg-white mt-[42px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer"
+              animate={{ opacity: onCTA ? 0 : 1 }}
+              transition={{ duration: 0.1 }}
+            >
+              <p className="text-[14px] text-black font-extrabold lg:text-[20px]">
+                Start Growing Now
+              </p>
+              <div className="bg-red-500 w-[36px] h-[36px]  lg:w-[48px] lg:h-[48px] rounded-4xl flex justify-center items-center ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="white"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </div>
+            </motion.button>
+          </NavLink>
+          <NavLink to={"/grow-with-us"}>
+            <motion.button className="w-50 h-[60px] p-4 lg:p-0 lg:w-66 lg:h-[60px] bg-white -mt-[60px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer">
+              <motion.p
+                animate={{ opacity: onCTA ? 1 : 0 }}
+                transition={{ duration: 1 }}
+                className="text-black font-extrabold lg:text-[20px]"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </div>
-          </motion.button>
-          <motion.button className="w-50 h-[60px] p-4 lg:p-0 lg:w-66 lg:h-[60px] bg-white -mt-[60px] rounded-4xl flex justify-center items-center gap-3 m-auto   cursor-pointer">
-            <motion.p
-              animate={{ opacity: onCTA ? 1 : 0 }}
-              transition={{ duration: 1 }}
-              className="text-black font-extrabold lg:text-[20px]"
-            >
-              Start Growing Now
-            </motion.p>
-            <motion.div
-              className="bg-red-500 w-[48px] h-[48px] rounded-4xl flex justify-center items-center "
-              initial={{ x: "-200px", opacity: 0 }}
-              animate={{ x: onCTA ? 0 : "-200px", opacity: onCTA ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="white"
-                class="size-6"
-                animate={{ rotate: onCTA ? 360 : 180 }}
+                Start Growing Now
+              </motion.p>
+              <motion.div
+                className="bg-red-500 w-[48px] h-[48px] rounded-4xl flex justify-center items-center "
+                initial={{ x: "-200px", opacity: 0 }}
+                animate={{ x: onCTA ? 0 : "-200px", opacity: onCTA ? 1 : 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </motion.svg>
-            </motion.div>
-          </motion.button>
+                <motion.svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="white"
+                  class="size-6"
+                  animate={{ rotate: onCTA ? 360 : 180 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </motion.svg>
+              </motion.div>
+            </motion.button>
+          </NavLink>
+
           <div className="flex justify-center flex-col items-center mt-13 gap-4">
             <div className="h-10 w-5 outline outline-[6px] outline-exered/10 inline-flex rounded-full justify-center pt-2">
               <div className="h-3 w-1 bg-exered rounded-full"></div>
@@ -182,12 +188,14 @@ const HeroSection = () => {
               <br /> communities, and impactful events for lasting growth.
             </p>
           </div>
-          <CTAButton
-            onCTA={onCTA}
-            setOnCTA={setOnCTA}
-            onArrow={onArrow}
-            setOnArrow={setOnArrow}
-          />
+          <NavLink to={"/grow-with-us"}>
+            <CTAButton
+              onCTA={onCTA}
+              setOnCTA={setOnCTA}
+              onArrow={onArrow}
+              setOnArrow={setOnArrow}
+            />
+          </NavLink>
         </div>
       </motion.div>
     </div>

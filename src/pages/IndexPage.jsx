@@ -18,6 +18,7 @@ import {
 } from "../context/SectionContext";
 import Section from "../components/Section";
 import Scrollbar from "../components/Scrollbar";
+import UpcomingEvent from "../sections/UpcomingEvent";
 const IndexPage = () => {
   const { values } = useSectionContextValues();
 
@@ -72,7 +73,7 @@ const IndexPage = () => {
           <HeroSection />
         </Section>
 
-        <div className="hidden sm:block absolute top-0 z-50" ref={plane1}>
+        <div className="hidden lg:block absolute top-0 z-50" ref={plane1}>
           <FloatingCards
             icon={penicon}
             headingText={"Strategic Content Creation"}
@@ -83,10 +84,10 @@ const IndexPage = () => {
             icon={calendericon}
             headingText={"Event Hosting"}
             contentText={"Host impactful events with ease."}
-            classname={"left-[900px] top-[114px]"}
+            classname={"left-[900px] top-[144px] 2xl:left-[1300px]"}
           />
         </div>
-        <div className="hidden sm:block absolute top-0 z-50" ref={plane2}>
+        <div className="hidden lg:block absolute top-0 z-50" ref={plane2}>
           <FloatingCards
             icon={groupicon}
             headingText={"Community Management"}
@@ -97,18 +98,21 @@ const IndexPage = () => {
             icon={charticon}
             headingText={"Web3 Growth Strategy"}
             contentText={"Scale your brand with strategy."}
-            classname={"left-[1188px] top-[510px]"}
+            classname={"left-[1188px] top-[510px] 2xl:left-[1200px]"}
           />
         </div>
         <div className="App">
           <Marquee />
           <Section section={sections[1]}>
-            <GrowthUnleashed />
+            <UpcomingEvent />
           </Section>
           <Section section={sections[2]}>
+            <GrowthUnleashed />
+          </Section>
+          <Section section={sections[3]}>
             <AboutUs />
           </Section>
-          <Section section={sections[3]} isLast>
+          <Section section={sections[4]} isLast>
             <Journey />
           </Section>
 

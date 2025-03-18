@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Marquee = () => {
   return (
-    <div className="w-full m-auto lg:h-70  h-30  ">
+    <div className="w-full m-auto lg:h-10  h-10  ">
       {/* <div className="gradient-merge"></div> */}
 
       <div className="w-full h-1 bg-exered"></div>

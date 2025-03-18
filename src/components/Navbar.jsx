@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/EXE MAIN.png";
 import useMousePosition from "../utils/useMousePosition";
 import { motion } from "framer-motion";
 import HeaderButton from "./HeaderButton";
 import Nav from "./Nav";
 import { forwardRef } from "react";
+import { SectionContext } from "../context/SectionContext";
 
 const menu = {
   open: {
@@ -41,9 +42,10 @@ const Navbar = forwardRef(function index(props, ref) {
   const [isHovered, setIsHovered] = useState(false);
   const size = isHovered ? 150 : 40;
   const [isActive, setIsActive] = useState(false);
+  // const { isActive, setIsActive } = useContext(SectionContext);
 
   return (
-    <div className="container flex justify-between font-black mt-5 px-[15px] items-center sm:px-[75px] sm:mt-8 lg:px-[100px]  lg:mt-16 overflow-x-clip">
+    <div className=" flex justify-between font-black mt-5 px-[15px] items-center sm:px-[75px] sm:mt-8 lg:px-[100px]  xl:px-[150px] lg:mt-16 overflow-x-clip">
       <div className=" flex items-center justify-center text-center gap-2">
         <img className="w-10 sm:w-15 lg:w-25" src={logo} alt="" />
         <span className="font-exe text-[16px] md:text-[20px] text-white lg:text-[30px]">
@@ -58,8 +60,9 @@ const Navbar = forwardRef(function index(props, ref) {
             animate={isActive ? "open" : "closed"}
             initial="closed"
           >
-            {isActive && <Nav />}
+            {isActive && <Nav isActive={isActive} setIsActive={setIsActive} />}
           </motion.div>
+
           <div className="nav-button">
             <HeaderButton
               ref={ref}

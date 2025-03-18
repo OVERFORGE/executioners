@@ -5,6 +5,7 @@ import Discord from "../assets/discord.svg";
 import Instagram from "../assets/instagram.svg";
 import Medium from "../assets/medium.svg";
 import Magnetic from "./Magnetic";
+import { NavLink } from "react-router-dom";
 const FooterContent = () => {
   return (
     <div className="bg-exebeige h-[500px] lg:h-[300px] w-full relative max-h-[500px] lg:max-h-[300px]">
@@ -91,21 +92,31 @@ const FooterContent = () => {
             Quick Links
           </div>
           <div className="font-semibold lg:mt-4 text-[16px] lg:text-[18px]">
-            <p className="hover:text-exered">Home</p>
-            <p className="hover:text-exered">About</p>
-            <p className="hover:text-exered">Merchandise</p>
-            <p className="hover:text-exered">Events</p>
-            <p className="hover:text-exered">Contact Us</p>
+            <p className="hover:text-exered">
+              <NavLink to="/">Home</NavLink>
+            </p>
+            <p className="hover:text-exered">
+              <NavLink to="/events">Events</NavLink>
+            </p>
+            <p className="hover:text-exered">
+              <NavLink to="/merchandise">Merchandise</NavLink>
+            </p>
+            <p className="hover:text-exered">
+              <NavLink to="/grow-with-us">Grow With Us</NavLink>
+            </p>
+            <p className="hover:text-exered">
+              <NavLink to="/contact-us">Contact Us</NavLink>
+            </p>
           </div>
         </div>
         <div className=" flex-6/12 flex justify-center font-primary mt-8 gap-20">
           <div className="hidden sm:block">
             <h1 className="font-extrabold text-[24px]">Legal Links</h1>
             <p className="font-semibold mt-4 text-[18px] hover:text-exered">
-              Terms of Service
+              <NavLink to="/terms-of-service">Terms of service</NavLink>
             </p>
             <p className="font-semibold text-[18px] hover:text-exered">
-              Privacy Policy
+              <NavLink to="/privacy-policy">Privacy Policy</NavLink>
             </p>
           </div>
           <div className="flex flex-col -mt-6 sm:mt-0 items-start ">

@@ -5,14 +5,18 @@ export const sections = [
   },
   {
     positionId: 1,
-    title: "Why Us Section",
+    title: "Upcoming Events Section",
   },
   {
     positionId: 2,
-    title: "About Us Section",
+    title: "Why Us Section",
   },
   {
     positionId: 3,
+    title: "About Us Section",
+  },
+  {
+    positionId: 4,
     title: "Journey Section",
   },
 ];

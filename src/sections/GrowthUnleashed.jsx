@@ -8,7 +8,7 @@ import communityIcon from "../assets/community_icon.png";
 import eventIcon from "../assets/event_icon.png";
 const GrowthUnleashed = () => {
   return (
-    <div className="container px-4 lg:px-25 relative font-primary ">
+    <div className=" px-4 lg:px-25 relative font-primary ">
       <h1 className=" text-4xl lg:text-6xl font-extrabold text-exebeige ">
         Web3 Growth <span className="text-exered">Unleashed</span>
       </h1>
