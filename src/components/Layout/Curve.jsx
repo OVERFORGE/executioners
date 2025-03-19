@@ -57,6 +57,7 @@ export default function Curve({ children, backgroundColor }) {
         className="background"
       />
       <motion.p className="route" {...anim(text)}>
+        <img></img>
         {routes[window.location.pathname]}
         {console.log(routes[window.location.pathname])}
       </motion.p>
@@ -85,7 +86,7 @@ const SVG = ({ height, width }) => {
 
   return (
     <motion.svg className={"curve-svg"} {...anim(translate)}>
-      <motion.path {...anim(curve(initialPath, targetPath))} />
+      <motion.path fill={"#ff000d"} {...anim(curve(initialPath, targetPath))} />
     </motion.svg>
   );
 };
