@@ -19,6 +19,7 @@ import {
 import Section from "../components/Section";
 import Scrollbar from "../components/Scrollbar";
 import UpcomingEvent from "../sections/UpcomingEvent";
+import Curve from "../components/Layout/Curve";
 const IndexPage = () => {
   const { values } = useSectionContextValues();
 
@@ -62,64 +63,66 @@ const IndexPage = () => {
   };
 
   return (
-    <div
-      onMouseMove={(e) => {
-        manageMouseMove(e);
-      }}
-    >
-      <SectionContext.Provider value={values}>
-        <Scrollbar sections={sections} />
-        <Section section={sections[0]} isFirst>
-          <HeroSection />
-        </Section>
-
-        <div className="hidden lg:block absolute top-0 z-50" ref={plane1}>
-          <FloatingCards
-            icon={penicon}
-            headingText={"Strategic Content Creation"}
-            contentText={"Create content that drives engagement."}
-            classname={`left-[60px] top-[195px]`}
-          />
-          <FloatingCards
-            icon={calendericon}
-            headingText={"Event Hosting"}
-            contentText={"Host impactful events with ease."}
-            classname={"left-[900px] top-[144px] 2xl:left-[1300px]"}
-          />
-        </div>
-        <div className="hidden lg:block absolute top-0 z-50" ref={plane2}>
-          <FloatingCards
-            icon={groupicon}
-            headingText={"Community Management"}
-            contentText={"Grow and engage your community."}
-            classname={"left-[250px] top-[545px]"}
-          />
-          <FloatingCards
-            icon={charticon}
-            headingText={"Web3 Growth Strategy"}
-            contentText={"Scale your brand with strategy."}
-            classname={"left-[1188px] top-[510px] 2xl:left-[1200px]"}
-          />
-        </div>
-        <div className="App">
-          <Marquee />
-          <Section section={sections[1]}>
-            <UpcomingEvent />
-          </Section>
-          <Section section={sections[2]}>
-            <GrowthUnleashed />
-          </Section>
-          <Section section={sections[3]}>
-            <AboutUs />
-          </Section>
-          <Section section={sections[4]} isLast>
-            <Journey />
+    <Curve>
+      <div
+        onMouseMove={(e) => {
+          manageMouseMove(e);
+        }}
+      >
+        <SectionContext.Provider value={values}>
+          <Scrollbar sections={sections} />
+          <Section section={sections[0]} isFirst>
+            <HeroSection />
           </Section>
 
-          <div className="h-[30vh]"></div>
-        </div>
-      </SectionContext.Provider>
-    </div>
+          <div className="hidden lg:block absolute top-0 z-50" ref={plane1}>
+            <FloatingCards
+              icon={penicon}
+              headingText={"Strategic Content Creation"}
+              contentText={"Create content that drives engagement."}
+              classname={`left-[60px] top-[195px]`}
+            />
+            <FloatingCards
+              icon={calendericon}
+              headingText={"Event Hosting"}
+              contentText={"Host impactful events with ease."}
+              classname={"left-[900px] top-[144px] 2xl:left-[1300px]"}
+            />
+          </div>
+          <div className="hidden lg:block absolute top-0 z-50" ref={plane2}>
+            <FloatingCards
+              icon={groupicon}
+              headingText={"Community Management"}
+              contentText={"Grow and engage your community."}
+              classname={"left-[250px] top-[545px]"}
+            />
+            <FloatingCards
+              icon={charticon}
+              headingText={"Web3 Growth Strategy"}
+              contentText={"Scale your brand with strategy."}
+              classname={"left-[1188px] top-[510px] 2xl:left-[1200px]"}
+            />
+          </div>
+          <div className="App">
+            <Marquee />
+            <Section section={sections[1]}>
+              <UpcomingEvent />
+            </Section>
+            <Section section={sections[2]}>
+              <GrowthUnleashed />
+            </Section>
+            <Section section={sections[3]}>
+              <AboutUs />
+            </Section>
+            <Section section={sections[4]} isLast>
+              <Journey />
+            </Section>
+
+            <div className="h-[30vh]"></div>
+          </div>
+        </SectionContext.Provider>
+      </div>
+    </Curve>
   );
 };
 

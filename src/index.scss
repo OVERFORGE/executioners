@@ -414,3 +414,31 @@ body {
   height: 100%;
   background: linear-gradient(250deg, var(--color-bg1), var(--color-bg-2));
 }
+
+.curve {
+  .curve-svg,
+  .background {
+    position: fixed;
+    height: calc(100vh + 600px);
+    width: 100vw;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    color: #ff000d;
+  }
+  .background {
+    background-color: #ff000d;
+    transition: opacity 0s linear 0.1s;
+  }
+  .route {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: white;
+    font-size: 46px;
+    z-index: 999;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}

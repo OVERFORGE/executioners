@@ -4,7 +4,7 @@ import StickyCursor from "./components/StickyCursor";
 
 import IndexPage from "./pages/IndexPage";
 import { useEffect, useRef, useState } from "react";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 import {
   BrowserRouter,
@@ -29,22 +29,26 @@ function ScrollToTop() {
 
   return null;
 }
-function App() {
+function App({ Component, pageProps }) {
+  const location = useLocation();
+  const currentRoute = location.pathname;
   return (
     <div className="overflow-x-clip">
       <StickyCursor />
       <Navbar />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<IndexPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/esports" element={<EsportsPage />} />
-        <Route path="/merchandise" element={<MerchandisePage />} />
-        <Route path="/contact-us" element={<ContactUsPage />} />
-        <Route path="/grow-with-us" element={<GrowWIthUs />} />
-        <Route path="/terms-of-service" element={<TermsOfServices />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={currentRoute}>
+          <Route path="/" element={<IndexPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/esports" element={<EsportsPage />} />
+          <Route path="/merchandise" element={<MerchandisePage />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/grow-with-us" element={<GrowWIthUs />} />
+          <Route path="/terms-of-service" element={<TermsOfServices />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+      </AnimatePresence>
 
       <Footer />
     </div>
