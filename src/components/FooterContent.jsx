@@ -8,7 +8,7 @@ import Magnetic from "./Magnetic";
 import { NavLink } from "react-router-dom";
 const FooterContent = () => {
   return (
-    <div className="bg-exebeige h-[500px] lg:h-[300px] w-full relative max-h-[500px] lg:max-h-[300px]">
+    <div className="bg-exebeige h-[700px] lg:h-[300px] w-full relative max-h-[700px] lg:max-h-[300px]">
       <div className="flex flex-col sm:flex-row px-4 lg:px-25">
         <div className="flex-5/12">
           <div cla>
@@ -109,8 +109,8 @@ const FooterContent = () => {
             </p>
           </div>
         </div>
-        <div className=" flex-6/12 flex justify-center font-primary mt-8 gap-20">
-          <div className="hidden sm:block">
+        <div className=" flex-6/12 items-start flex flex-col sm:flex-row justify-center font-primary mt-8 gap-20 w-full">
+          <div className="ml-10 sm:ml-0">
             <h1 className="font-extrabold text-[24px]">Legal Links</h1>
             <p className="font-semibold mt-4 text-[18px] hover:text-exered">
               <NavLink to="/terms-of-service">Terms of service</NavLink>
@@ -123,7 +123,7 @@ const FooterContent = () => {
             <h1 className="font-extrabold text-[20px] lg:text-[24px] pl-7 ">
               Stay Updated
             </h1>
-            <div className="mt-2 lg:mt-5 w-75 h-12 rounded-3xl flex relative">
+            <div className="mt-2 lg:mt-5 w-75 h-12 rounded-3xl flex relative ml-4">
               <input
                 type="text"
                 className="bg-white w-full h-12 rounded-3xl pl-5 outline-none text-exered font-semibold"

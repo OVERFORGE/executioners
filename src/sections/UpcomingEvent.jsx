@@ -24,7 +24,7 @@ const UpcomingEvent = () => {
                 seats available – register now to secure your spot:
               </p>
               <div className="m-auto w-full flex items-center justify-center relative">
-                <motion.button className="bg-exebeige font-exemarquee text-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md cursor-pointer ">
+                <motion.button className="bg-exebeige font-primary text-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md cursor-pointer ">
                   Register Now{" "}
                 </motion.button>
                 <motion.button
@@ -36,7 +36,7 @@ const UpcomingEvent = () => {
                     repeatType: "mirror",
                     ease: "easeInOut",
                   }}
-                  className="text-exebeige font-exemarquee bg-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md absolute top-0 right-auto left-auto cursor-pointer "
+                  className="text-exebeige font-primary bg-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md absolute top-0 right-auto left-auto cursor-pointer "
                 >
                   Register Now{" "}
                 </motion.button>
@@ -49,7 +49,7 @@ const UpcomingEvent = () => {
                     repeatType: "mirror",
                     ease: "easeInOut",
                   }}
-                  className="bg-exebeige font-exemarquee text-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md absolute top-0 right-auto left-auto cursor-pointer "
+                  className="bg-exebeige font-primary text-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md absolute top-0 right-auto left-auto cursor-pointer "
                   onClick={() => window.open("https://lu.ma/e2md1o4y")}
                 >
                   Register Now{" "}
