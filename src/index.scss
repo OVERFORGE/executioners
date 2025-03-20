@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import "atropos/scss";
 @font-face {
   font-family: exemarquee;
   font-style: normal;
@@ -20,6 +20,7 @@ body {
     background: transparent;
     display: none;
   }
+  background: linear-gradient(250deg, var(--color-bg1), var(--color-bg-2));
   // position: relative;
 }
 
@@ -93,6 +94,7 @@ body {
   overflow: hidden;
   top: 0;
   left: 0;
+  z-index: 0;
 }
 .blur1 {
   position: absolute;
@@ -112,6 +114,7 @@ body {
 
   animation: moveInCircle 3s infinite;
   animation: moveHorizontal 20s infinite;
+  z-index: 0;
 }
 .blur2 {
   position: absolute;
@@ -129,6 +132,7 @@ body {
   );
   opacity: 1;
   animation: moveVertical 3s infinite;
+  z-index: 0;
 }
 
 .mask-container {
@@ -404,18 +408,21 @@ body {
     rgba(0, 0, 0, 0.6) 55%
   );
 }
-.privacy-policy {
-  width: 100%;
-  height: 100%;
+// .privacy-policy,
+// .terms-of-service,
+// .event-page,
+// .an-event {
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(250deg, var(--color-bg1), var(--color-bg-2));
+// }
+.bg-fix {
   background: linear-gradient(250deg, var(--color-bg1), var(--color-bg-2));
-}
-.terms-of-service {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(250deg, var(--color-bg1), var(--color-bg-2));
+  margin-top: -30vh;
 }
 
 .curve {
+  overflow: hidden;
   .curve-svg,
   .background {
     position: fixed;
@@ -425,10 +432,10 @@ body {
     left: 0;
     top: 0;
     z-index: 998;
-    color: #ff000d;
+    color: #000000;
   }
   .background {
-    background-color: #ff000d;
+    background-color: #000000;
     transition: opacity 0s linear 0.1s;
   }
   .route {
@@ -441,4 +448,38 @@ body {
     transform: translateX(-50%);
     text-align: center;
   }
+  .curve-svg-grains {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; /* Aligns with the SVG path */
+    left: 0;
+  }
+}
+
+.event-card-holder {
+  background: rgba(255, 0, 13, 0.14901960784313725);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border: 1px solid rgba(255, 0, 13, 0.93);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+}
+.event-card-container {
+  position: relative;
+  z-index: 999;
+}
+.my-atropos {
+  width: 320px;
+  height: 160px;
+  z-index: 999;
+}
+
+.an-event {
+  position: relative;
+  z-index: 0;
 }

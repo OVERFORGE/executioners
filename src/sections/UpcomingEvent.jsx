@@ -1,6 +1,7 @@
 import React from "react";
 import EventBanner from "../assets/banner LPU FINAL_.png";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 const UpcomingEvent = () => {
   return (
     <div className="px-4 lg:px-25 relative mt-20 lg:mt-40 font-primary h-full mb-40 ">
@@ -50,9 +51,8 @@ const UpcomingEvent = () => {
                     ease: "easeInOut",
                   }}
                   className="bg-exebeige font-primary text-exered font-bold text-2xl italic px-4 py-3 mt-8 rounded-md absolute top-0 right-auto left-auto cursor-pointer "
-                  onClick={() => window.open("https://lu.ma/e2md1o4y")}
                 >
-                  Register Now{" "}
+                  <NavLink to="/an-event">Register Now </NavLink>
                 </motion.button>
               </div>
             </div>

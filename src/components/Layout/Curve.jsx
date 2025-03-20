@@ -15,6 +15,7 @@ const routes = {
   "/grow-with-us": "Grow With Us",
   "/terms-of-service": "Terms Of Service",
   "/privacy-policy": "Privacy Policy",
+  "/an-event": "Stellar WEB3 Workshop",
 };
 
 const anim = (variants) => {
@@ -83,10 +84,61 @@ const SVG = ({ height, width }) => {
         Q${width / 2} ${height} 0 ${height}
         L0 0
     `;
+  const initialPathrect = `
+        M0 300 
+        Q${width / 2} 0 ${width} 300
+        L${width} ${height}
+        Q${width / 2} ${height + 300} 0 ${height}
+        L0 0
+    `;
+
+  const targetPathrect = `
+        M0 300
+        Q${width / 2} 0 ${width} 300
+        L${width} ${height - 300}
+        Q${width / 2} ${height - 300} 0 ${height - 300}
+        L0 0
+    `;
 
   return (
-    <motion.svg className={"curve-svg"} {...anim(translate)}>
-      <motion.path fill={"#ff000d"} {...anim(curve(initialPath, targetPath))} />
+    <motion.svg
+      className={"curve-svg"}
+      {...anim(translate)}
+      width={width}
+      height={height}
+    >
+      <defs>
+        <clipPath id="clipPath">
+          <motion.path {...anim(curve(initialPath, targetPath))} />
+        </clipPath>
+
+        <filter id="noiseFilter" x="0" y="0" width={width} height={height}>
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency={`0.8 0.8`}
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+          <feComponentTransfer>
+            <feFuncR type="linear" slope="0.05" />
+            <feFuncG type="linear" slope="0.05" />
+            <feFuncB type="linear" slope="0.05" />
+          </feComponentTransfer>
+        </filter>
+      </defs>
+
+      <motion.path fill={"#000000"} {...anim(curve(initialPath, targetPath))} />
+
+      <motion.rect
+        x="0"
+        y="0"
+        width={width}
+        height={height}
+        {...anim(curve(initialPath, targetPath))}
+        className={"curve-svg-grains"}
+        filter="url(#noiseFilter)"
+        clipPath="url(#clipPath)"
+      />
     </motion.svg>
   );
 };

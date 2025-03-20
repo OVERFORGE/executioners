@@ -20,6 +20,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import GrowWIthUs from "./pages/GrowWIthUs";
 import TermsOfServices from "./pages/TermsOfServices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AnEventPage from "./pages/AnEventPage";
 function ScrollToTop() {
   const location = useLocation();
 
@@ -47,6 +48,7 @@ function App({ Component, pageProps }) {
           <Route path="/grow-with-us" element={<GrowWIthUs />} />
           <Route path="/terms-of-service" element={<TermsOfServices />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/an-event" element={<AnEventPage />} />
         </Routes>
       </AnimatePresence>
 
