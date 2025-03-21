@@ -86,7 +86,9 @@ const IndexPage = () => {
               icon={calendericon}
               headingText={"Event Hosting"}
               contentText={"Host impactful events with ease."}
-              classname={"left-[900px] top-[144px] 2xl:left-[1300px]"}
+              classname={
+                "left-[900px] top-[144px] lg:left-[800px] xl:left-[700px] mxl:left-[1100px]  2xl:left-[1300px]"
+              }
             />
           </div>
           <div className="hidden lg:block absolute top-0 z-50" ref={plane2}>
@@ -94,13 +96,15 @@ const IndexPage = () => {
               icon={groupicon}
               headingText={"Community Management"}
               contentText={"Grow and engage your community."}
-              classname={"left-[250px] top-[545px]"}
+              classname={"left-[160px] top-[545px]"}
             />
             <FloatingCards
               icon={charticon}
               headingText={"Web3 Growth Strategy"}
               contentText={"Scale your brand with strategy."}
-              classname={"left-[1188px] top-[510px] 2xl:left-[1200px]"}
+              classname={
+                "left-[1188px] top-[510px] lg:left-[700px]   mxl:left-[950px] 2xl:left-[1200px]"
+              }
             />
           </div>
           <div className="App">

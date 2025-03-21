@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import StickyCursor from "./components/StickyCursor";
-
+import { Toaster, toast } from "sonner";
 import IndexPage from "./pages/IndexPage";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, motion, AnimatePresence } from "framer-motion";
@@ -36,6 +36,7 @@ function App({ Component, pageProps }) {
   return (
     <div className="overflow-x-clip">
       <StickyCursor />
+      <Toaster />
       <Navbar />
       <ScrollToTop />
       <AnimatePresence mode="wait">

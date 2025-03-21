@@ -6,6 +6,7 @@ import HeaderButton from "./HeaderButton";
 import Nav from "./Nav";
 import { forwardRef } from "react";
 import { SectionContext } from "../context/SectionContext";
+import { NavLink } from "react-router-dom";
 
 const menu = {
   open: {
@@ -46,12 +47,15 @@ const Navbar = forwardRef(function index(props, ref) {
 
   return (
     <div className=" flex justify-between font-black mt-5 px-[15px] items-center sm:px-[75px] sm:mt-8 lg:px-[100px]  xl:px-[150px] lg:mt-16 overflow-x-clip">
-      <div className=" flex items-center justify-center text-center gap-2">
-        <img className="w-10 sm:w-15 lg:w-25" src={logo} alt="" />
-        <span className="font-exe text-[16px] md:text-[20px] text-white lg:text-[30px]">
-          The Executioners{" "}
-        </span>
-      </div>
+      <NavLink to={"/"}>
+        <div className=" flex items-center justify-center text-center gap-2">
+          <img className="w-10 sm:w-15 lg:w-25" src={logo} alt="" />
+          <span className="font-exe text-[16px] md:text-[20px] text-white lg:text-[30px]">
+            The Executioners{" "}
+          </span>
+        </div>
+      </NavLink>
+
       <div className="relative -mt-8 md:-mt-10 lg:-mt-8 ">
         <div className="header">
           <motion.div
