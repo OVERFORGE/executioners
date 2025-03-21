@@ -112,7 +112,7 @@ const HeroSection = () => {
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
       >
-        <div className="absolute hidden lg:block lg:top-[154px] left-0  text-center lg:mt-16   font-primary">
+        <div className="absolute hidden lg:block lg:top-[154px] left-0 container  text-center lg:mt-16   font-primary">
           <div className="flex justify-center items-center gap-[3px] ml-[-6px]">
             <div className="bg-exebeige w-[7px] h-[7px] rounded-4xl"></div>
             <p
