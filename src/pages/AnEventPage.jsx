@@ -24,7 +24,7 @@ const AnEventPage = () => {
                         transform: "translateZ(75px)",
                         transformStyle: "preserve-3d",
                       }}
-                      src={A4}
+                      src="https://iili.io/3zCu1Nn.png"
                       className="w-full rounded-lg"
                       alt=""
                     />
