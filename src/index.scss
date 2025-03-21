@@ -418,7 +418,12 @@ body {
 // }
 .bg-fix {
   background: linear-gradient(250deg, var(--color-bg1), var(--color-bg-2));
-  margin-top: -30vh;
+  margin-top: -70vh;
+}
+@media screen and (max-width: 600px) {
+  .bg-fix {
+    margin-top: -130vh;
+  }
 }
 
 .curve {
