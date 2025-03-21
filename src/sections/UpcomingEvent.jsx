@@ -12,7 +12,11 @@ const UpcomingEvent = () => {
         <div className="upcoming-event">
           <div className="flex flex-col sm:flex-row py-2 px-4 lg:py-4 lg:px-25 gap-10">
             <div className="flex-1 rounded-2xl">
-              <img src={EventBanner} className="w-full rounded-md" alt="" />
+              <img
+                src="https://iili.io/3zC5Dxe.png"
+                className="w-full rounded-md"
+                alt=""
+              />
             </div>
             <div className="flex-1 sm:flex-2 text-exebeige/90 font-semibold font-primary text-sm lg:text-lg">
               <p>
