@@ -63,27 +63,29 @@ const AnEventPage = () => {
     const response = await axios.post(newurl, data);
     if (response.data.success) {
       toast(response.data.message);
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("regno").value = "";
-      document.getElementById("phone").value = "";
-      document.getElementById("section").value = "";
-      document.getElementById("rollno").value = "";
-      document.getElementById("twitterid").value = "";
-      data.name = "";
-      data.email = "";
-      data.regno = "";
-      data.phone = "";
-      data.section = "";
-      data.rollno = "";
-      data.twitterid = "";
-      setNameEmpty(true);
-      setSectionEmpty(true);
-      setRegnoEmpty(true);
-      setEmailEmpty(true);
-      setRollnoEmpty(true);
-      setPhoneEmpty(true);
-      setTwitteridEmpty(true);
+      if (response.data.message === "Registration successful") {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("regno").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("section").value = "";
+        document.getElementById("rollno").value = "";
+        document.getElementById("twitterid").value = "";
+        data.name = "";
+        data.email = "";
+        data.regno = "";
+        data.phone = "";
+        data.section = "";
+        data.rollno = "";
+        data.twitterid = "";
+        setNameEmpty(true);
+        setSectionEmpty(true);
+        setRegnoEmpty(true);
+        setEmailEmpty(true);
+        setRollnoEmpty(true);
+        setPhoneEmpty(true);
+        setTwitteridEmpty(true);
+      }
     }
   };
   return (
