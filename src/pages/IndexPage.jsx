@@ -20,6 +20,7 @@ import Section from "../components/Section";
 import Scrollbar from "../components/Scrollbar";
 import UpcomingEvent from "../sections/UpcomingEvent";
 import Curve from "../components/Layout/Curve";
+import PricingPage from "../components/PricingPage";
 const IndexPage = () => {
   const { values } = useSectionContextValues();
 
@@ -109,14 +110,17 @@ const IndexPage = () => {
           </div>
           <div className="App">
             <Marquee />
-            <Section section={sections[1]}>
+            {/* <Section section={sections[1]}>
               <UpcomingEvent />
-            </Section>
-            <Section section={sections[2]}>
+            </Section> */}
+            <Section section={sections[1]}>
               <GrowthUnleashed />
             </Section>
-            <Section section={sections[3]}>
+            <Section section={sections[2]}>
               <AboutUs />
+            </Section>
+            <Section section={sections[3]}>
+              <PricingPage />
             </Section>
             <Section section={sections[4]} isLast>
               <Journey />

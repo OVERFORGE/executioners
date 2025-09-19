@@ -19,9 +19,9 @@ const HeroSection = () => {
             <p className="text-[12px] lg:text-base">Executioners Brings You</p>
           </div>
           <div className="flex text-2xl lg:text-6xl justify-center items-center gap-2 lg:gap-5 lg:mt-4 ">
-            <p className="font-extrabold">Your</p>
+            <p className="font-extrabold">India's</p>
             <p className="font-secondary ">Web3</p>
-            <p className="font-extrabold">Marketer</p>
+            <p className="font-extrabold">Storyteller</p>
           </div>
           <div className="text-2xl lg:mt-[26px] lg:text-6xl font-extrabold tracking-[-0.02em]">
             <p>From Strategy to Execution.</p>
@@ -81,7 +81,6 @@ const HeroSection = () => {
                   stroke-width="1.5"
                   stroke="white"
                   class="size-6"
-                  animate={{ rotate: onCTA ? 360 : 180 }}
                   transition={{ duration: 0.5 }}
                 >
                   <path
@@ -138,7 +137,7 @@ const HeroSection = () => {
               }}
               className="font-extrabold"
             >
-              Your
+              India's
             </p>
             <p
               onMouseEnter={() => {
@@ -160,7 +159,7 @@ const HeroSection = () => {
               }}
               className="font-extrabold"
             >
-              Marketer
+              Storyteller
             </p>
           </div>
           <div className="lg:mt-[26px] lg:text-6xl font-extrabold tracking-[-0.02em]">

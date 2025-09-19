@@ -2,7 +2,7 @@ import { forwardRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { div } from "framer-motion/m";
 const paragraph =
-  "We empower Web3 brands to scale by delivering strategic content, impactful marketing campaigns, and expert community management. From creating engaging content to hosting bootcamps and events, we help brands build strong online presence and drive user engagement. Our tailored solutions ensure consistent growth and long-term success in the Web3 space.";
+  "The Executioners is India’s Web3 content engine, helping projects grow through powerful media and marketing. We simplify complex ideas into clear stories and deliver them through cinematic trailers, event coverage, brand campaigns, and community activations. With deep experience across protocols, startups, and Web3 communities, we combine creativity, strategy, and execution to make brands stand out in the evolving digital space.";
 const Paragraph = forwardRef(function Paragraph(props, ref) {
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,9 +18,14 @@ const Paragraph = forwardRef(function Paragraph(props, ref) {
           const end = start + 1 / words.length;
 
           return (
-            <Word key={i} progress={scrollYProgress} range={[start, end]}>
-              {word}
-            </Word>
+            <>
+              <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                {word}
+              </Word>
+              {/* <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                {word}
+              </Word> */}
+            </>
           );
         })}
       </p>

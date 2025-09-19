@@ -21,6 +21,7 @@ import GrowWIthUs from "./pages/GrowWIthUs";
 import TermsOfServices from "./pages/TermsOfServices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AnEventPage from "./pages/AnEventPage";
+import EventPage from "./pages/EventPage";
 function ScrollToTop() {
   const location = useLocation();
 
@@ -43,6 +44,7 @@ function App({ Component, pageProps }) {
         <Routes location={location} key={currentRoute}>
           <Route path="/" element={<IndexPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/:eventId" element={<EventPage />} />
           <Route path="/esports" element={<EsportsPage />} />
           <Route path="/merchandise" element={<MerchandisePage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
