@@ -168,7 +168,6 @@ export default function PricingPage() {
             </div>
           )}
 
-          {/* Pricing Cards */}
           <div
             className={`isolate mx-auto mt-4 mb-28 grid max-w-md grid-cols-1 gap-4 lg:mx-0 lg:max-w-none select-none ${
               tiers.length === 2 ? "lg:grid-cols-2" : ""
@@ -221,7 +220,6 @@ function PricingCard({
         {tier.description}
       </p>
 
-      {/* Animated Price */}
       <div className="mt-6 flex items-baseline gap-x-1 h-12 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.span
@@ -247,13 +245,13 @@ function PricingCard({
       </div>
       <div className="mt-6 flex justify-center">
         <Link
-          to={tier.href}
+          to={`/subscribe/${tier.id}`}
           className="px-6 py-2 rounded-xl  border-exered bg-exered/70 border-2 text-white font-semibold hover:bg-red-600 transition w-full text-center"
         >
-          {tier.cta}
+          Book Now
         </Link>
       </div>
-      {/* Features */}
+
       <motion.ul
         initial={false}
         animate={{ height: expanded ? "auto" : 150 }}
@@ -274,7 +272,6 @@ function PricingCard({
         ))}
       </motion.ul>
 
-      {/* Show More Button */}
       {tier.features.length > 5 && (
         <div className="flex justify-center">
           <button

@@ -22,6 +22,7 @@ import TermsOfServices from "./pages/TermsOfServices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AnEventPage from "./pages/AnEventPage";
 import EventPage from "./pages/EventPage";
+import SubscribePage from "./pages/SubscribePage";
 function ScrollToTop() {
   const location = useLocation();
 
@@ -52,6 +53,7 @@ function App({ Component, pageProps }) {
           <Route path="/terms-of-service" element={<TermsOfServices />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/an-event" element={<AnEventPage />} />
+          <Route path="/subscribe/:packageId" element={<SubscribePage />} />
         </Routes>
       </AnimatePresence>
 

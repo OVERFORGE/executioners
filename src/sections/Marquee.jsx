@@ -1,49 +1,36 @@
 import React from "react";
 import { motion } from "framer-motion";
+import gifSrc from "../assets/run.gif";
 const Marquee = () => {
   return (
-    <div className="w-full m-auto lg:h-10  h-10  ">
-      {/* <div className="gradient-merge"></div> */}
-
+    <div className="w-full m-auto lg:h-35 h-20 overflow-hidden bg-exebeige">
       <div className="w-full h-1 bg-exered"></div>
+
       <motion.div
-        initial={{ x: "-4000px" }}
-        animate={{ x: 0 }}
+        initial={{ x: "-100%" }}
+        animate={{ x: "100%" }}
         transition={{
-          duration: 40,
+          duration: 10,
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
         }}
-        className="flex font-exemarquee font-black text-4xl lg:text-6xl lg:pb-3 text-exered gap-30 cursor-default pt-1 lg:pt-5 -tracking-normal font-bold italic "
+        className="flex h-38 gap-72 -mt-5 "
       >
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
-        <p>#BEATTHEGOD</p>
-        <p>#EVOLUTIONSTARTSNOW</p>
-        <p>#RISELIKETHETIDES</p>
+        <div className="flex-shrink-0 -mt-5 w-2/3">
+          <img
+            src={gifSrc}
+            alt="Running GIF"
+            className="h-56 object-cover rounded-lg "
+          />
+        </div>
+        <div className="flex-shrink-0 -mt-5 w-2/3">
+          <img
+            src={gifSrc}
+            alt="Running GIF"
+            className="h-56 object-cover rounded-lg "
+          />
+        </div>
       </motion.div>
       <div className="w-full h-1 bg-exered"></div>
     </div>
