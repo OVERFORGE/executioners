@@ -16,6 +16,9 @@ const routes = {
   "/terms-of-service": "Terms Of Service",
   "/privacy-policy": "Privacy Policy",
   "/an-event": "Stellar WEB3 Workshop",
+  "/subscribe/0": "Our Pricing",
+  "/subscribe/1": "Our Pricing",
+  "/subscribe/2": "Our Pricing",
 };
 
 const anim = (variants) => {
@@ -52,12 +55,12 @@ export default function Curve({ children, backgroundColor }) {
   }, []);
 
   return (
-    <div className="page curve" style={{ backgroundColor }}>
+    <div className=" page curve" style={{ backgroundColor }}>
       <div
         style={{ opacity: dimensions.width == null ? 1 : 0 }}
         className="background"
       />
-      <motion.p className="route" {...anim(text)}>
+      <motion.p className="route font-exepixel" {...anim(text)}>
         <img></img>
         {routes[window.location.pathname]}
         {console.log(routes[window.location.pathname])}

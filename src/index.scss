@@ -8,6 +8,12 @@
   font-weight: 200 700;
   src: url(../src/assets/HACKED-KERX.TTF) format("truetype");
 }
+@font-face {
+  font-family: exepixel;
+  font-style: normal;
+  font-weight: 200 500 600 700 900;
+  src: url(../src/assets/pixel.ttf) format("truetype");
+}
 html,
 body {
   font-family: "Dongle", sans-serif;

@@ -121,10 +121,12 @@ export default function PricingPage() {
   const [frequency, setFrequency] = useState(frequencies[0]);
 
   return (
-    <div className={`flex flex-col w-full items-center ${styles.fancyOverlay}`}>
+    <div
+      className={` flex flex-col w-full items-center ${styles.fancyOverlay}`}
+    >
       <div className="w-full flex flex-col items-center">
         <div className="container  px-4 lg:px-25 relative mt-20 lg:mt-40 font-primary">
-          <h1 className="text-5xl lg:text-6xl font-extrabold text-exebeige ">
+          <h1 className="font-exepixel text-5xl lg:text-6xl font-extrabold text-exebeige ">
             Our <span className="text-exered">Pricing</span>
           </h1>
         </div>

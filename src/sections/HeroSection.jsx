@@ -16,7 +16,9 @@ const HeroSection = () => {
         <div className=" text-exebeige text-center mt-[54px] lg:mt-16  font-primary ">
           <div className="flex justify-center items-center gap-[3px] ml-[-6px]">
             <div className="bg-exebeige w-[7px] h-[7px] rounded-4xl"></div>
-            <p className="text-[12px] lg:text-base">Executioners Brings You</p>
+            <p className="font-exepixel text-[12px] lg:text-base">
+              Executioners Brings You
+            </p>
           </div>
           <div className="flex text-2xl lg:text-6xl justify-center items-center gap-2 lg:gap-5 lg:mt-4 ">
             <p className="font-extrabold">India's</p>
@@ -38,8 +40,8 @@ const HeroSection = () => {
               animate={{ opacity: onCTA ? 0 : 1 }}
               transition={{ duration: 0.1 }}
             >
-              <p className="text-[14px] text-black font-extrabold lg:text-[20px]">
-                Start Growing Now
+              <p className="font-exepixel text-[14px] text-black font-extrabold lg:text-[20px]">
+                Press Start
               </p>
               <div className="bg-red-500 w-[36px] h-[36px]  lg:w-[48px] lg:h-[48px] rounded-4xl flex justify-center items-center ">
                 <svg
@@ -64,9 +66,9 @@ const HeroSection = () => {
               <motion.p
                 animate={{ opacity: onCTA ? 1 : 0 }}
                 transition={{ duration: 1 }}
-                className="text-black font-extrabold lg:text-[20px]"
+                className="font-exepixel text-black font-extrabold lg:text-[20px]"
               >
-                Start Growing Now
+                Press Start
               </motion.p>
               <motion.div
                 className="bg-red-500 w-[48px] h-[48px] rounded-4xl flex justify-center items-center "
@@ -97,7 +99,7 @@ const HeroSection = () => {
             <div className="h-10 w-5 outline outline-[6px] outline-exered/10 inline-flex rounded-full justify-center pt-2">
               <div className="h-3 w-1 bg-exered rounded-full"></div>
             </div>
-            <p className="uppercase text-zinc-500 font-extrabold tracking-wider">
+            <p className="font-exepixel uppercase text-zinc-500 font-extrabold tracking-wider">
               Scroll to learn more
             </p>
           </div>
@@ -115,8 +117,9 @@ const HeroSection = () => {
       >
         <div className="absolute hidden lg:block lg:top-[154px] left-0 container  text-center lg:mt-16   font-primary">
           <div className="flex justify-center items-center gap-[3px] ml-[-6px]">
-            <div className="bg-exebeige w-[7px] h-[7px] rounded-4xl"></div>
+            <div className=" bg-exebeige w-[7px] h-[7px] rounded-4xl"></div>
             <p
+              className="font-exepixel"
               onMouseEnter={() => {
                 setIsHovered(true), console.log("hovered");
               }}
