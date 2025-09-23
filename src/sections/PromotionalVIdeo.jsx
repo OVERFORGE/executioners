@@ -1,5 +1,5 @@
 import React from "react";
-import vid from "../assets/USDT_MARKETPLACE.mp4";
+import vid from "../assets/char_running.mp4";
 const PromotionalVIdeo = () => {
   return (
     <div>
