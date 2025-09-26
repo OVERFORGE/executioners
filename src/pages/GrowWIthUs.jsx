@@ -7,9 +7,9 @@ const GrowWIthUs = () => {
   return (
     <Curve>
       <div>
-        <div className="container  px-4 lg:px-25 relative mt-20 lg:mt-40 font-primary">
+        {/* <div className="container  px-4 lg:px-25 relative mt-20 lg:mt-40 font-primary">
           <PromotionalVIdeo />
-        </div>
+        </div> */}
 
         <PageNotFound />
 
