@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import gifSrc from "../assets/run.gif";
 import usdt from "../assets/USDT_MARKETPLACE.png";
-import wizz from "../assets/wizz.png";
+import wizz from "../assets/Wizz.png";
 import ncr from "../assets/NCR.png";
 import mavia from "../assets/MAVIA.png";
 import stellar from "../assets/STELLAR.png";
