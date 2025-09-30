@@ -119,10 +119,10 @@ const IndexPage = () => {
             <Section section={sections[2]}>
               <AboutUs />
             </Section>
-            <Section section={sections[3]}>
+            {/* <Section section={sections[3]}>
               <PricingPage />
-            </Section>
-            <Section section={sections[4]} isLast>
+            </Section> */}
+            <Section section={sections[3]} isLast>
               <Journey />
             </Section>
 
